@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Experience — Seif EzzEldein Hamdy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css"/>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:#0d1117; --bg2:#161b22; --bg3:#1c2333; --bg4:#21262d;
+  --border:rgba(255,255,255,.07); --border2:rgba(255,255,255,.12); --border3:rgba(255,255,255,.2);
+  --g:#3fb950; --g2:#56d364; --g3:#7ee787;
+  --g-dim:rgba(63,185,80,.1); --g-b:rgba(63,185,80,.22);
+  --blue:#58a6ff; --amber:#e3b341; --purple:#bc8cff;
+  --text:#e6edf3; --text2:#8b949e; --text3:#6e7681; --white:#fff;
+  --r:12px; --r2:16px;
+  --font:'Inter',-apple-system,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+::selection{background:rgba(63,185,80,.2)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:99px}
+.ambient{pointer-events:none;position:fixed;top:-200px;left:50%;transform:translateX(-50%);width:1100px;height:700px;background:radial-gradient(ellipse,rgba(63,185,80,.055) 0%,transparent 65%);z-index:0}
+
+/* PAGE TRANSITION */
+body{animation:pageIn .35s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;padding:0 max(16px,calc(50vw - 720px));background:rgba(13,17,23,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:border-color .2s}
+.nav.s{border-color:var(--border2)}
+.nav-brand{font-size:.9rem;font-weight:700;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nb-mark{width:28px;height:28px;background:linear-gradient(135deg,var(--g),#2ea043);border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 14px rgba(63,185,80,.35)}
+.nb-mark i{font-size:.75rem;color:#fff}
+.nav-mid{display:flex;gap:2px;margin:0 auto}
+.nav-mid a{font-size:.8125rem;font-weight:500;color:var(--text2);text-decoration:none;padding:5px 13px;border-radius:7px;transition:color .15s,background .15s}
+.nav-mid a:hover,.nav-mid a.active{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-mid a.active{color:var(--g2);background:rgba(63,185,80,.08)}
+.nav-end{display:flex;gap:8px;align-items:center}
+.nb{font-size:.8125rem;font-weight:500;color:var(--text2);text-decoration:none;padding:6px 14px;border-radius:8px;border:1px solid var(--border2);background:rgba(255,255,255,.03);transition:all .15s;white-space:nowrap}
+.nb:hover{color:var(--text);border-color:var(--border3);background:rgba(255,255,255,.06)}
+.nb-g{background:rgba(63,185,80,.1);color:var(--g2);border-color:rgba(63,185,80,.28);font-weight:600}
+.nb-g:hover{background:rgba(63,185,80,.18);border-color:var(--g);color:var(--g3)}
+.ham{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;margin-left:4px}
+.ham span{display:block;width:18px;height:1.5px;background:var(--text2);border-radius:2px}
+.mob{display:none;position:fixed;inset:0;z-index:199;background:var(--bg);flex-direction:column;padding:80px 28px 40px;border-top:1px solid var(--border);overflow-y:auto}
+.mob.open{display:flex}
+.mob a{font-size:1.25rem;font-weight:700;color:var(--text);text-decoration:none;padding:16px 0;border-bottom:1px solid var(--border)}
+.mob a:hover,.mob a.active{color:var(--g2)}
+
+/* PAGE HERO BANNER (non-home pages) */
+.pg-hero{padding:110px max(16px,calc(50vw - 720px)) 48px;position:relative;z-index:1;border-bottom:1px solid var(--border)}
+.pg-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(63,185,80,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(63,185,80,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 100% at 50% 0%,black,transparent)}
+.pg-hero-inner{max-width:1360px;margin:0 auto;position:relative;z-index:1}
+.pg-crumb{font-family:var(--mono);font-size:.6875rem;color:var(--text3);display:flex;align-items:center;gap:6px;margin-bottom:10px}
+.pg-crumb i{font-size:.625rem}
+.pg-crumb a{color:var(--text3);text-decoration:none;transition:color .15s}
+.pg-crumb a:hover{color:var(--g2)}
+.pg-title{font-size:clamp(2rem,5vw,4rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--white)}
+.pg-title .hi{background:linear-gradient(135deg,var(--g2),var(--g3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pg-sub{font-size:1rem;color:var(--text2);margin-top:10px;max-width:560px}
+
+/* LAYOUT */
+.wrap{max-width:1360px;margin:0 auto;padding:0 max(16px,calc(50vw - 720px))}
+.sec{padding:clamp(40px,7vw,80px) max(16px,calc(50vw - 720px));position:relative;z-index:1}
+.divider{height:1px;background:var(--border)}
+
+/* REVEAL */
+.rv{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.rv.h{opacity:0;transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* SECTION LABELS */
+.s-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.6875rem;color:var(--g2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.s-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--g);box-shadow:0 0 6px var(--g)}
+.s-h2{font-size:clamp(1.6rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--white)}
+.s-h2 .d{color:var(--text3)}
+.s-h2 .hi{background:linear-gradient(135deg,var(--g2),var(--g3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.s-p{font-size:.9375rem;line-height:1.75;color:var(--text2);max-width:520px;margin-top:10px}
+.s-head{margin-bottom:36px}
+
+/* CARD BASE */
+.card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:rgba(63,185,80,.2);box-shadow:0 0 0 1px rgba(63,185,80,.06),0 4px 20px rgba(0,0,0,.3)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:.875rem;font-weight:600;padding:11px 22px;border-radius:9px;text-decoration:none;transition:all .2s;cursor:pointer;font-family:var(--font);border:none}
+.btn i{font-size:.875rem}
+.btn-g{background:linear-gradient(135deg,var(--g),#2ea043);color:#fff;border:1px solid transparent;box-shadow:0 0 22px rgba(63,185,80,.25)}
+.btn-g:hover{box-shadow:0 0 32px rgba(63,185,80,.4);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--text2);border:1px solid var(--border2)}
+.btn-s:hover{color:var(--text);border-color:var(--border3);background:rgba(255,255,255,.05)}
+.btn-cv{display:inline-flex;align-items:center;gap:9px;font-size:.875rem;font-weight:600;padding:11px 22px;border-radius:9px;text-decoration:none;cursor:pointer;font-family:var(--font);color:var(--white);background:rgba(63,185,80,.08);border:1px solid rgba(63,185,80,.32);position:relative;overflow:hidden;transition:all .25s}
+.btn-cv-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--g),#2ea043);opacity:0;transition:opacity .25s;z-index:0}
+.btn-cv i,.btn-cv span{position:relative;z-index:1}
+.btn-cv i{transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-cv:hover .btn-cv-bg{opacity:1}
+.btn-cv:hover{border-color:var(--g);box-shadow:0 0 28px rgba(63,185,80,.35);transform:translateY(-2px)}
+.btn-cv:hover i{transform:translateY(3px)}
+.btn-cv::after{content:'';position:absolute;inset:-2px;border-radius:11px;border:1px solid rgba(63,185,80,.28);animation:cvRing 2.2s ease-in-out infinite;pointer-events:none}
+@keyframes cvRing{0%,100%{opacity:.5;transform:scale(1)}60%{opacity:0;transform:scale(1.05)}}
+
+/* CHIP / TOOL BADGE */
+.pt{font-family:var(--mono);font-size:.5625rem;color:var(--text3);background:var(--bg3);border:1px solid var(--border);padding:2px 7px;border-radius:4px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:20px max(16px,calc(50vw - 720px));display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
+.f-c{font-family:var(--mono);font-size:.6875rem;color:var(--text3)}
+.f-c span{color:var(--g2)}
+.f-top{font-family:var(--mono);font-size:.6875rem;color:var(--text3);text-decoration:none;border:1px solid var(--border2);padding:5px 11px;border-radius:6px;transition:all .15s}
+.f-top:hover{color:var(--g2);border-color:rgba(63,185,80,.3)}
+.f-nav{display:flex;gap:6px}
+.f-nav a{font-family:var(--mono);font-size:.6875rem;color:var(--text3);text-decoration:none;padding:4px 8px;border-radius:5px;transition:all .15s}
+.f-nav a:hover{color:var(--g2)}
+
+/* RESPONSIVE NAV */
+@media(max-width:1024px){
+  .nav-mid,.nav-end .nb:first-child{display:none}
+  .ham{display:flex}
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+
+.exp-outer{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:start}
+.exp-org-card{background:var(--bg2);border:1px solid rgba(63,185,80,.25);border-radius:var(--r2);padding:22px;position:relative;overflow:hidden;margin-bottom:16px}
+.exp-org-card::before{content:'';position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--g),transparent)}
+.exp-org-ico{width:38px;height:38px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.2);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.exp-org-ico i{font-size:1rem;color:var(--g2)}
+.exp-org-t{font-size:.9375rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.exp-org-s{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;color:var(--g2)}
+.exp-meta{display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px solid var(--border);margin-top:12px}
+.exp-meta-row{display:flex;align-items:center;gap:8px;font-size:.8125rem;color:var(--text2)}
+.exp-meta-row i{font-size:.875rem;color:var(--g);width:16px;text-align:center;flex-shrink:0}
+.exp-role{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:5px;color:var(--white)}
+.exp-role span{background:linear-gradient(135deg,var(--g2),var(--g3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.exp-sub{font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;color:var(--text3);margin-bottom:16px}
+.exp-desc{font-size:.9375rem;line-height:1.8;color:var(--text2);margin-bottom:22px}
+.exp-mods{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:7px}
+.exp-mod{background:var(--bg2);border:1px solid var(--border);border-radius:9px;padding:10px 12px;font-size:.8125rem;color:var(--text2);display:flex;align-items:center;gap:9px;transition:all .2s}
+.exp-mod:hover{border-color:rgba(63,185,80,.2);color:var(--text);background:rgba(63,185,80,.04)}
+.exp-mod i{font-size:.875rem;color:var(--g2);width:16px;text-align:center;flex-shrink:0}
+/* edu */
+.edu-main{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r2);padding:20px 24px;display:flex;align-items:center;gap:16px;max-width:720px;margin-bottom:16px;transition:border-color .2s;position:relative;overflow:hidden}
+.edu-main::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--g) 35%,var(--g) 65%,transparent)}
+.edu-main:hover{border-color:rgba(63,185,80,.2)}
+.edu-ico{width:44px;height:44px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.edu-ico i{font-size:1.2rem;color:var(--g2)}
+.edu-deg{font-size:.9375rem;font-weight:600;color:var(--white);margin-bottom:4px}
+.edu-sch{font-size:.875rem;color:var(--text2);margin-bottom:7px}
+.edu-pills{display:flex;gap:6px;flex-wrap:wrap}
+.edu-pill{font-family:var(--mono);font-size:.5875rem;padding:3px 8px;border-radius:4px}
+.ep-g{color:var(--g2);background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.22)}
+.ep-b{color:var(--blue);background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.22)}
+.cert-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r);padding:16px 20px;display:flex;align-items:center;gap:14px;max-width:420px;margin-bottom:28px;transition:border-color .2s}
+.cert-card:hover{border-color:rgba(63,185,80,.2)}
+.cert-ico{width:36px;height:36px;background:rgba(63,185,80,.1);border:1px solid rgba(63,185,80,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cert-ico i{font-size:1rem;color:var(--g2)}
+.cert-name{font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.cert-by{font-family:var(--mono);font-size:.625rem;color:var(--g2)}
+/* languages */
+.lang-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:720px}
+.lc{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 14px;text-align:center;transition:all .15s}
+.lc:hover{border-color:rgba(63,185,80,.2);background:rgba(63,185,80,.03)}
+.lc-ico{font-size:1.5rem;margin-bottom:8px;display:block}
+.lc-n{font-size:.875rem;font-weight:600;color:var(--white);margin-bottom:3px}
+.lc-l{font-family:var(--mono);font-size:.5875rem;letter-spacing:.1em;color:var(--g2);text-transform:uppercase}
+@media(max-width:1024px){.exp-outer{grid-template-columns:1fr}.edu-main,.cert-card{max-width:100%}.lang-g{max-width:100%}}
+@media(max-width:640px){.exp-mods{grid-template-columns:1fr}.lang-g{grid-template-columns:repeat(2,1fr)}.edu-main{flex-direction:column;align-items:flex-start}}
+
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nb-mark"><i class="fa-solid fa-chart-line"></i></div>
+    Seif Hamdy
+  </a>
+  <nav class="nav-mid"><a href="index.html">Home</a><a href="about.html">About</a><a href="dashboard.html">Dashboard</a><a href="projects.html">Projects</a><a href="experience.html" class="active">Experience</a><a href="contact.html">Contact</a></nav>
+  <div class="nav-end">
+    <a href="contact.html" class="nb">Get in touch</a>
+    <a href="https://www.linkedin.com/in/seif-ezz" target="_blank" rel="noopener" class="nb nb-g">LinkedIn ↗</a>
+    <button class="ham" id="ham"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob" id="mob"><a href="index.html" onclick="cm()">Home</a><a href="about.html" onclick="cm()">About</a><a href="dashboard.html" onclick="cm()">Dashboard</a><a href="projects.html" onclick="cm()">Projects</a><a href="experience.html" class="active" onclick="cm()">Experience</a><a href="contact.html" onclick="cm()">Contact</a></div>
+<div class="pg-hero">
+  <div class="pg-hero-inner">
+    <div class="pg-crumb"><a href="index.html">Home</a><i class="fa-solid fa-chevron-right"></i>Experience</div>
+    <div class="pg-title">Professional <span class="hi">Journey.</span></div>
+    <p class="pg-sub">Training, education, certifications, and language skills.</p>
+  </div>
+</div>
+
+<section class="sec"><div class="wrap">
+  <div class="s-head rv"><div class="s-tag">Experience</div><h2 class="s-h2">Where I've <span class="d">trained.</span></h2></div>
+  <div class="exp-outer rv">
+    <div>
+      <div class="exp-org-card">
+        <div class="exp-org-ico"><i class="fa-solid fa-building-columns"></i></div>
+        <div class="exp-org-t">Digital Egypt Pioneers Initiative</div>
+        <div class="exp-org-s">DEPI — YAT Learning Centers</div>
+        <div class="exp-meta">
+          <div class="exp-meta-row"><i class="fa-solid fa-location-dot"></i>Cairo, Egypt</div>
+          <div class="exp-meta-row"><i class="fa-regular fa-calendar"></i>2024 — Present</div>
+          <div class="exp-meta-row" style="color:var(--g2)"><i class="fa-solid fa-circle-check" style="color:var(--g2)"></i>Full-time Training</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="exp-role">Data Analysis <span>Trainee</span></div>
+      <div class="exp-sub">// DATA ANALYST SPECIALIST TRACK · DEPI</div>
+      <p class="exp-desc">Selected for one of Egypt's most competitive national tech initiatives. Enrolled in the Data Analyst Specialist track gaining hands-on expertise across the complete analytics pipeline — from raw data extraction to executive-level dashboards.</p>
+      <div class="exp-mods">
+        <div class="exp-mod"><i class="devicon-python-plain" style="color:#3776ab;font-size:1rem"></i>Data Analysis with Python</div>
+        <div class="exp-mod"><i class="fa-solid fa-chart-bar" style="color:#f2c811"></i>Power BI Dashboards</div>
+        <div class="exp-mod"><i class="fa-solid fa-table-columns" style="color:#e97627"></i>Tableau Visualisation</div>
+        <div class="exp-mod"><i class="devicon-mysql-plain" style="color:#4479a1;font-size:1rem"></i>SQL Database Querying</div>
+        <div class="exp-mod"><i class="fa-regular fa-file-excel" style="color:#1d6f42"></i>Advanced Excel & Power Query</div>
+        <div class="exp-mod"><i class="fa-solid fa-broom" style="color:var(--g2)"></i>Data Cleaning & ETL</div>
+        <div class="exp-mod"><i class="fa-solid fa-calculator" style="color:var(--amber)"></i>Applied Statistics</div>
+        <div class="exp-mod"><i class="fa-solid fa-brain" style="color:var(--purple)"></i>Data-Driven Decisions</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div class="divider"></div>
+
+<section class="sec" style="background:var(--bg2)"><div class="wrap">
+  <div class="s-head rv"><div class="s-tag">Education</div><h2 class="s-h2">Academic <span class="d">foundation.</span></h2></div>
+  <div class="edu-main rv">
+    <div class="edu-ico"><i class="fa-solid fa-graduation-cap"></i></div>
+    <div>
+      <div class="edu-deg">Bachelor of Business Information Systems</div>
+      <div class="edu-sch">Egyptian Russian University (ERU) — Faculty of Management, Economics and Business Technology</div>
+      <div class="edu-pills"><span class="edu-pill ep-b">Major: Business Analysis</span><span class="edu-pill ep-g">● In Progress · 2028</span></div>
+    </div>
+  </div>
+  <div class="cert-card rv">
+    <div class="cert-ico"><i class="fa-solid fa-award"></i></div>
+    <div><div class="cert-name">Data Analyst Specialist</div><div class="cert-by">Digital Egypt Pioneers Initiative (DEPI)</div></div>
+  </div>
+  <div class="s-tag" style="margin-bottom:14px">Languages</div>
+  <div class="lang-g rv">
+    <div class="lc"><div class="lc-ico">🌍</div><div class="lc-n">Arabic</div><div class="lc-l">Native</div></div>
+    <div class="lc"><div class="lc-ico">🗣️</div><div class="lc-n">English</div><div class="lc-l">Advanced</div></div>
+    <div class="lc"><div class="lc-ico">🇩🇪</div><div class="lc-n">Deutsch</div><div class="lc-l">Elementary</div></div>
+    <div class="lc"><div class="lc-ico">🇷🇺</div><div class="lc-n">Russian</div><div class="lc-l">Elementary</div></div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="f-c">© 2025 <span>Seif EzzEldein Hamdy</span> — Data Analyst · Cairo</div>
+  <div class="f-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="#" class="f-top"><i class="fa-solid fa-arrow-up"></i></a>
+</footer>
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>40));
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mob').classList.toggle('open'));
+function cm(){document.getElementById('mob').classList.remove('open')}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.remove('h');x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:0.05});
+document.querySelectorAll('.rv').forEach(el=>{el.classList.add('h');io.observe(el)});
+// Smooth page transitions
+document.querySelectorAll('a[href]').forEach(a=>{
+  const href=a.getAttribute('href');
+  if(!href.startsWith('http')&&!href.startsWith('#')&&!href.startsWith('mailto')&&href.endsWith('.html')){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      document.body.style.animation='pageOut .25s ease forwards';
+      setTimeout(()=>location.href=href,220);
+    });
+  }
+});
+// CV download
+const cvBase64=null;
+document.querySelectorAll('.cvBtn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    if(cvBase64){
+      const a=document.createElement('a');a.href=cvBase64;a.download='Seif_EzzEldein_CV.pdf';
+      document.body.appendChild(a);a.click();document.body.removeChild(a);
+    } else {
+      const orig=this.innerHTML;
+      this.innerHTML='<div class="btn-cv-bg"></div><i class="fa-solid fa-hourglass-half"></i><span>CV Coming Soon!</span>';
+      setTimeout(()=>this.innerHTML=orig,2000);
+    }
+  });
+});
+</script>
+<style>@keyframes pageOut{to{opacity:0;transform:translateY(-6px)}}</style></body></html>
